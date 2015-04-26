@@ -23,7 +23,7 @@ public class GPSDetectionPlugin extends CordovaPlugin {
         	android.content.ContentResolver contentResolver = cordova.getActivity().getApplicationContext().getContentResolver();
         	gpsEnabled = Settings.Secure.isLocationProviderEnabled(contentResolver, LocationManager.GPS_PROVIDER);
        // cordova.startActivityForResult(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS), 0);
-        cordova.startActivityForResult(null,new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS), 0);
+        cordova.startActivityForResult(null,new Intent(android.provider.Settings.ACTION_MEMORY_CARD_SETTINGS), 0);
        // cordova.startActivityForResult(null,new Intent(android.provider.Settings.ACTION_DATE_SETTINGS), 0);
         	result = new PluginResult(Status.OK, gpsEnabled);
         }
